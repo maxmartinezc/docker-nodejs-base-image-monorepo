@@ -1,0 +1,10 @@
+{
+    "name": "node-18",
+    "version": "1.0.0",
+    "nodeImage": "18.20.3",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/node-18",
+    "targets": {
+        "build": {}
+    }
+}

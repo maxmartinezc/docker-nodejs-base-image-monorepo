@@ -1,0 +1,19 @@
+{
+  "extends": "nx/presets/npm.json",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "projectName": "my-docker-nodejs-base-image",
+        "dockerRepository": "maxmartinezc",
+        "commands": [
+          "echo \"docker_context=./{args.projectSourceDir}\" >> $GITHUB_ENV",
+          "echo \"docker_file=./{args.projectSourceDir}/Dockerfile\" >> $GITHUB_ENV",
+          "echo \"docker_tag={args.dockerRepository}/{args.projectName}:{args.nodeImage}-{args.projectVersion}\" >> $GITHUB_ENV"
+        ],
+        "forwardAllArgs": false
+      }
+    }
+  }
+}
