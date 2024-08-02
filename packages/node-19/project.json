@@ -1,0 +1,10 @@
+{
+    "name": "node-19",
+    "version": "1.0.0",
+    "nodeImage": "19.0.0",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/node-19",
+    "targets": {
+        "build": {}
+    }
+}
